@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React,{Fragment} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -29,9 +29,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const DialogContent = withStyles(theme => ({
   root: {
     padding: theme.spacing(2),
-    backgroundColor: Color(theme.palette.with)
-      .alpha(0, 5)
-      .string()
+    backgroundColor: 'transparent'
   }
 }))(MuiDialogContent);
 
@@ -49,12 +47,12 @@ export default function FullScreenDialog() {
 
   return (
     <Fragment>
-      <div>
+       <div>
         <Button variant="outlined" color="primary" onClick={handleClickOpen}>
           Open full-screen dialog
         </Button>
-      </div>
-      <Dialog
+       </div>
+       <Dialog
         fullScreen
         open={open}
         onClose={handleClose}
@@ -97,5 +95,6 @@ export default function FullScreenDialog() {
         </DialogContent>
       </Dialog>
     </Fragment>
+    
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -48,10 +48,12 @@ export default function FullScreenDialog() {
   };
 
   return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open full-screen dialog
-      </Button>
+    <Fragment>
+      <div>
+        <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+          Open full-screen dialog
+        </Button>
+      </div>
       <Dialog
         fullScreen
         open={open}
@@ -94,6 +96,6 @@ export default function FullScreenDialog() {
           </Typography>
         </DialogContent>
       </Dialog>
-    </div>
+    </Fragment>
   );
 }
